@@ -15,20 +15,38 @@ A full-stack web application that parses donation emails and generates professio
 
 Before running this application, ensure you have the following installed:
 
-- **Node.js** (v16 or higher)
-- **Python** (v3.8 or higher)
-- **pip** (Python package manager)
+- **Node.js** (v16 or higher) - [Download here](https://nodejs.org/)
+- **Python** (v3.8 or higher) - [Download here](https://www.python.org/downloads/)
+- **Git** - [Download here](https://git-scm.com/)
 
 ## 🛠️ Installation & Setup
 
-### Backend Setup
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/Donation-Email-Parser-Receipt-Generator.git
+cd Donation-Email-Parser-Receipt-Generator
+```
+
+### 2. Backend Setup
 
 1. **Navigate to the backend directory:**
    ```bash
    cd backend
    ```
 
-2. **Install Python dependencies:**
+2. **Create a virtual environment (recommended):**
+   ```bash
+   # On Windows
+   python -m venv venv
+   venv\Scripts\activate
+
+   # On macOS/Linux
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+
+3. **Install Python dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
@@ -38,16 +56,16 @@ Before running this application, ensure you have the following installed:
    pip install fastapi uvicorn fpdf python-dateutil pydantic
    ```
 
-3. **Start the backend server:**
+4. **Start the backend server:**
    ```bash
    python main.py
    ```
 
    The backend will run on `http://localhost:8000`
 
-### Frontend Setup
+### 3. Frontend Setup
 
-1. **Navigate to the frontend directory:**
+1. **Open a new terminal and navigate to the frontend directory:**
    ```bash
    cd frontend
    ```
@@ -64,6 +82,27 @@ Before running this application, ensure you have the following installed:
 
    The frontend will run on `http://localhost:5173`
 
+### 4. Access the Application
+
+Open your browser and navigate to `http://localhost:5173` to use the application.
+
+## 🔧 Quick Start (Alternative)
+
+If you prefer a faster setup without virtual environments:
+
+```bash
+# Clone and setup backend
+git clone https://github.com/yourusername/Donation-Email-Parser-Receipt-Generator.git
+cd Donation-Email-Parser-Receipt-Generator/backend
+pip install fastapi uvicorn fpdf python-dateutil pydantic
+python main.py
+
+# In a new terminal, setup frontend
+cd ../frontend
+npm install
+npm run dev
+```
+
 ## 📁 Project Structure
 
 ```
@@ -71,6 +110,7 @@ Donation-Email-Parser-Receipt-Generator/
 ├── backend/
 │   ├── main.py                 # FastAPI server
 │   ├── logo.png               # Logo for PDF receipts
+│   ├── requirements.txt       # Python dependencies
 │   └── hope_foundation_emails.txt  # Sample email data
 ├── frontend/
 │   ├── src/
@@ -81,7 +121,7 @@ Donation-Email-Parser-Receipt-Generator/
 │   │   │   ├── LoadingSkeleton.jsx
 │   │   │   ├── PdfPreview.jsx
 │   │   │   ├── ParsedView.jsx
-│   │   │   ├── InitialView.jsx
+│   │   │   ├── InitilalView.jsx
 │   │   │   ├── Button.jsx
 │   │   │   ├── ErrorHandle.jsx
 │   │   │   ├── Logo.jsx
@@ -90,8 +130,10 @@ Donation-Email-Parser-Receipt-Generator/
 │   │   ├── main.jsx
 │   │   └── style.css
 │   ├── package.json
+│   ├── package-lock.json
 │   └── vite.config.js
-└── README.md
+├── README.md
+└── DEVELOPMENT_JOURNEY.md
 ```
 
 ## 🎯 How It Works
@@ -228,7 +270,7 @@ The application handles various error scenarios:
 
 ### Backend Deployment
 
-1. **Production Server**: Deploy to a production server (e.g., Render, Railway,Fly.io)
+1. **Production Server**: Deploy to a production server (e.g., Render, Railway, Fly.io)
 2. **Environment Variables**: Set production environment variables
 3. **CORS Configuration**: Update CORS origins for production domain
 4. **Static Files**: Ensure logo.png is accessible
@@ -236,16 +278,23 @@ The application handles various error scenarios:
 ### Frontend Deployment
 
 1. **Build**: Run `npm run build` to create production build
-2. **Deploy**: Deploy to static hosting (e.g.,Vercel,Render)
+2. **Deploy**: Deploy to static hosting (e.g., Vercel, Render)
 3. **API URL**: Update API URL to production backend endpoint
 
 ## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+### Development Guidelines
+
+- Follow the existing code style
+- Add comments for complex logic
+- Test your changes thoroughly
+- Update documentation if needed
 
 ## 📄 License
 
@@ -255,13 +304,24 @@ This project is open source and available under the [MIT License](LICENSE).
 
 For issues and questions:
 
-1. Check the error handling section
-2. Review the assumptions and email format requirements
+1. Check the [Issues](https://github.com/yourusername/Donation-Email-Parser-Receipt-Generator/issues) page
+2. Review the error handling section above
 3. Ensure all dependencies are properly installed
 4. Verify backend and frontend are running on correct ports
 
-## 🔄 Updates
+## 🔄 Changelog
 
 - **v1.0.0**: Initial release with basic email parsing and PDF generation
 - **v1.1.0**: Added loading states and improved UX
 - **v1.2.0**: Enhanced error handling and PDF preview functionality
+
+## 📚 Additional Resources
+
+- [FastAPI Documentation](https://fastapi.tiangolo.com/)
+- [React Documentation](https://react.dev/)
+- [FPDF Documentation](https://pyfpdf.github.io/fpdf2/)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+
+## ⭐ Star History
+
+If you find this project helpful, please consider giving it a star on GitHub!

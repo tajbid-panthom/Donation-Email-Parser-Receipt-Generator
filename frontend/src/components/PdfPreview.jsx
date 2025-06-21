@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Logo from "./Logo";
 import LoadingSpinner from "./LoadingSpinner";
 
 const API_URL = "http://localhost:8000";
