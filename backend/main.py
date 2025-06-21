@@ -388,3 +388,8 @@ async def preview_receipt(data: ParsedData):
     }
 
     return StreamingResponse(buffer, media_type='application/pdf', headers=headers)
+
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("main:app", host="0.0.0.0", port=8000)
