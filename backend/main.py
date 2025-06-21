@@ -43,8 +43,7 @@ app = FastAPI(
 # --- CORS Middleware Configuration ---
 # Allow frontend to communicate with backend during development
 origins = [
-    "http://localhost:5173",  # React app running on Vite
-    "http://localhost:3000",  # Alternative React port
+    "https://donation-email-parser-receipt-gener.vercel.app/",  # React app running on Vite
 ]
 
 app.add_middleware(
