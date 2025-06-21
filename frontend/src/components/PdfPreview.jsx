@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import LoadingSpinner from "./LoadingSpinner";
 
-const API_URL = "http://localhost:8000";
+const API_URL = "https://donation-email-parser-receipt-generator.onrender.com/";
 
 const PdfPreview = ({ parsedData }) => {
   const [activeTab, setActiveTab] = useState("styled"); // 'styled' or 'pdf'

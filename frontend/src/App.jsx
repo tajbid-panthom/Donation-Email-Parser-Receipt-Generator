@@ -3,7 +3,7 @@ import ParsedView from "./components/ParsedView";
 import InitialView from "./components/InitilalView";
 import LoadingOverlay from "./components/LoadingOverlay";
 
-const API_URL = "http://localhost:8000";
+const API_URL = "https://donation-email-parser-receipt-generator.onrender.com/";
 
 function App() {
   const [emailText, setEmailText] = useState("");
