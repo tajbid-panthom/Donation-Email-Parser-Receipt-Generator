@@ -237,10 +237,13 @@ async def download_receipt(data: ParsedData):
     pdf = FPDF()
     pdf.add_page()
     pdf.set_margins(20, 20, 20)  # Set margins: left, top, right
-
+    
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    LOGO_PATH = os.path.join(BASE_DIR, "logo.png")
     # Add logo if available (silently fail if logo not found)
     try:
-        pdf.image("logo.png", x=20, y=6, w=30)
+        # Then use:
+        pdf.image(LOGO_PATH, x=20, y=6, w=30)
     except:
         pass  # Continue without logo if file not found
 

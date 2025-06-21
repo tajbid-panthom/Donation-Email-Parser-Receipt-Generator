@@ -81,7 +81,7 @@ const PdfPreview = ({ parsedData }) => {
             <div className="flex items-start justify-between mb-6">
               <div className="w-16 h-16 bg-gray-200 rounded flex items-center justify-center">
                 <span className="text-xs text-gray-500">
-                  <img src="../../public/logo.png" alt="" />
+                  <img src="../assets/logo.png" alt="" />
                 </span>
               </div>
               <div className="text-center flex-1">
